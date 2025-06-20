@@ -35,7 +35,7 @@ function RouteComponent() {
 
   const handleEditProfile = async (values: Partial<IUser>) => {
     try {
-      const { email, title, ...rest } = values;
+      const { email, ...rest } = values;
       await editProfile(rest).unwrap();
       setShowProfileEditForm(false);
       toast.success("Profile Updated Successfully");
@@ -76,10 +76,6 @@ function RouteComponent() {
                 {user.first_name} {user.last_name}{" "}
                 {user.display_name && <small>@{user.display_name}</small>}
               </p>
-              <div className="space-x-2 capitalize">
-                <Badge>{user?.title}</Badge>
-                <Badge variant={"secondary"}>track:{user.track}</Badge>
-              </div>
             </div>
           </div>
           <Button
