@@ -19,13 +19,7 @@ export const userApi = ApiService.injectEndpoints({
             ]
           : ["Users"],
     }),
-    getExcos: builder.query<IUser[], void>({
-      query: () => ({
-        url: `/users/excos`,
-      }),
-      transformResponse: (response: { data: IUser[] }) => response.data,
-      providesTags: [{ type: "Excos", id: "List" }],
-    }),
+
     editUser: builder.mutation<void, { id: string; payload: Partial<IUser> }>({
       query: ({ id, payload }) => ({
         url: `/users/edit-user/${id}`,
@@ -68,5 +62,4 @@ export const {
   useGetUsersQuery,
   useToggleAdminRoleMutation,
   useEditUserProfileMutation,
-  useGetExcosQuery,
 } = userApi;
