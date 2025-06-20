@@ -1,0 +1,38 @@
+/* Basic editor styles */
+.tiptap {
+    border: 1px solid rgba($color: #000000, $alpha: 0.2);
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 10px;
+    min-height: 120px;
+    &:focus {
+      @apply border-primary outline-none;
+    }
+  
+    @apply prose text-brand-dark prose-sm sm:prose w-full max-w-none;
+    max-width: none !important;
+    color:#000000 !important;
+  
+  }
+  
+  .tiptap-menu {
+    display: inline-flex;
+    border: 1px solid rgba($color: #000000, $alpha: 0.3);
+    border-radius: 5px;
+    padding: 8px;
+    flex-wrap: wrap;
+    & > button {
+      margin: 0.25rem;
+      border: 1px solid rgba($color: #000000, $alpha: 0.3);
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+      min-width: 40px;
+      &.is-active {
+        background-color: rgba($color: #000000, $alpha: 0.1);
+      }
+    }
+  }
+  

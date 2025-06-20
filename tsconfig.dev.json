@@ -1,0 +1,16 @@
+{
+  "composite": true,
+  "extends": "./tsconfig.json",
+
+  "files": ["src/main.tsx"],
+  "include": [
+    "src"
+    // "__tests__/**/*.test.*"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
