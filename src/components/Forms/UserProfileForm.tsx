@@ -29,8 +29,6 @@ const formSchema = z.object({
   first_name: z.string(),
   last_name: z.string(),
   email: z.string().email({ message: "Valid Email" }),
-  track: z.string(),
-  title: z.string(),
 });
 
 export function UserProfileForm({
